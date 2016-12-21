@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Brokerage Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Phone</th>
+      <th>Brokerage</th>
+      <th>Is owner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brokerage_users.each do |brokerage_user| %>
+      <tr>
+        <td><%= brokerage_user.first_name %></td>
+        <td><%= brokerage_user.last_name %></td>
+        <td><%= brokerage_user.phone %></td>
+        <td><%= brokerage_user.brokerage_id %></td>
+        <td><%= brokerage_user.is_owner %></td>
+        <td><%= link_to 'Show', brokerage_user %></td>
+        <td><%= link_to 'Edit', edit_brokerage_user_path(brokerage_user) %></td>
+        <td><%= link_to 'Destroy', brokerage_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Brokerage User', new_brokerage_user_path %>

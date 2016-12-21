@@ -16,6 +16,12 @@ gem 'turbolinks', '~> 5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'rails_admin'
+gem 'devise'
+gem 'letter_opener'
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem 'paper_trail'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
@@ -26,4 +32,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop'
+end
+
+group :test do
+  gem 'mocha'
 end
