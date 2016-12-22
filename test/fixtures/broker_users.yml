@@ -1,0 +1,18 @@
+_fixture:
+  model_class: Broker::User
+
+snow_admin:
+  first_name: Admin
+  last_name: Adminerson
+  email: admin@snowbroker.com
+  phone: +1 111 222 3333
+  brokerage: snowbroker
+  is_owner: true
+
+snow_simple:
+  first_name: Junior
+  last_name: Juniorson
+  email: junior@snowbroker.com
+  phone: +1 111 222 3333
+  brokerage: snowbroker
+  is_owner: false

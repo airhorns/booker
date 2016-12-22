@@ -19,8 +19,12 @@ module Broker
     end
 
     def destroy
-      @broker_user.destroy
-      redirect_to broker_users_url, notice: 'Brokerage user was successfully destroyed.'
+      if @broker_user == current_broker_user
+        redirect_to broker_users_url, notice: "You can't destroy yourself, sorry."
+      else
+        @broker_user.destroy
+        redirect_to broker_users_url, notice: 'Brokerage user was successfully destroyed.'
+      end
     end
 
     private

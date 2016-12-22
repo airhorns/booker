@@ -1,17 +1,15 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   title: MyString
   description: MyText
-  brokerage: one
-  creator_id: one
+  brokerage: snowbroker
+  creator: snow_admin
   image_url: MyString
   activated_at: 2016-12-21 20:41:47
 
 two:
   title: MyString
   description: MyText
-  brokerage: two
-  creator_id: two
+  brokerage: snowbroker
+  creator: snow_admin
   image_url: MyString
   activated_at: 2016-12-21 20:41:47

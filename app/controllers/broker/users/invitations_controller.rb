@@ -23,8 +23,8 @@ module Broker
       if admin_user_signed_in?
         current_admin_user
       else
-        return nil unless broker_user_signed_in?
-        return nil unless current_broker_user.is_owner
+        throw(:warden) unless broker_user_signed_in?
+        throw(:warden) unless current_broker_user.is_owner
       end
     end
 

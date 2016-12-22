@@ -86,18 +86,8 @@ html, body	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/
 .booker-layout .booker-navigation .mdl-navigation__link:hover	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-layout .booker-navigation .mdl-navigation__link:hover {$/;"	function	line:83
 .booker-navigation .mdl-navigation__link .material-icons	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-navigation .mdl-navigation__link .material-icons {$/;"	function	line:87
 .booker-content	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-content {$/;"	function	line:93
-Broker	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^module Broker$/;"	module	line:1
-UsersController	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  class UsersController < BrokerAreaController$/;"	class	line:2	class:Broker
-index	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def index$/;"	method	line:6	class:Broker.UsersController
-edit	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def edit$/;"	method	line:10	class:Broker.UsersController
-update	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def update$/;"	method	line:13	class:Broker.UsersController
-destroy	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def destroy$/;"	method	line:21	class:Broker.UsersController
-set_broker_user	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def set_broker_user$/;"	method	line:28	class:Broker.UsersController
-broker_user_params	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def broker_user_params$/;"	method	line:32	class:Broker.UsersController
 Broker	/Users/hornairs/Code/booker/app/controllers/broker/users/invites_controller.rb	/^module Broker$/;"	module	line:1
 Users	/Users/hornairs/Code/booker/app/controllers/broker/users/invites_controller.rb	/^  class Users::InvitationsController < Devise::InvitationsController$/;"	class	line:2	class:Broker
-AdminUsers	/Users/hornairs/Code/booker/app/controllers/admin_users/sessions_controller.rb	/^class AdminUsers::SessionsController < Devise::SessionsController$/;"	class	line:1
-dev_auth	/Users/hornairs/Code/booker/app/controllers/admin_users/sessions_controller.rb	/^  def dev_auth$/;"	method	line:2	class:AdminUsers
 AdminUser	/Users/hornairs/Code/booker/app/models/admin_user.rb	/^class AdminUser < ApplicationRecord$/;"	class	line:1
 name	/Users/hornairs/Code/booker/app/models/admin_user.rb	/^  def name$/;"	method	line:8	class:AdminUser
 BrokerageContext	/Users/hornairs/Code/booker/app/controllers/concerns/brokerage_context.rb	/^module BrokerageContext$/;"	module	line:1
@@ -105,9 +95,66 @@ set_brokerage_context	/Users/hornairs/Code/booker/app/controllers/concerns/broke
 BrokerAreaController	/Users/hornairs/Code/booker/app/controllers/broker_area_controller.rb	/^class BrokerAreaController < ApplicationController$/;"	class	line:1
 authenticate_broker_or_admin_user!	/Users/hornairs/Code/booker/app/controllers/broker_area_controller.rb	/^  def authenticate_broker_or_admin_user!$/;"	method	line:9	class:BrokerAreaController
 set_brokerage_context	/Users/hornairs/Code/booker/app/controllers/broker_area_controller.rb	/^  def set_brokerage_context$/;"	method	line:13	class:BrokerAreaController
+ApplicationController	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+current_broker_user	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^  def current_broker_user$/;"	method	line:4	class:ApplicationController
+after_sign_in_path_for	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^  def after_sign_in_path_for(user)$/;"	method	line:12	class:ApplicationController
+snowbroker	/Users/hornairs/Code/booker/test/fixtures/brokerages.yml	/^snowbroker:$/;"	function	line:1
+name	/Users/hornairs/Code/booker/test/fixtures/brokerages.yml	/^  name: SnowBroker$/;"	function	line:2
+logo_url	/Users/hornairs/Code/booker/test/fixtures/brokerages.yml	/^  logo_url: https:\/\/harry.me\/favicon.ico$/;"	function	line:3
+_fixture	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^_fixture:$/;"	function	line:1
+model_class	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  model_class: Broker::User$/;"	function	line:2
+snow_admin	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^snow_admin:$/;"	function	line:4
+first_name	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  first_name: Admin$/;"	function	line:5
+last_name	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  last_name: Adminerson$/;"	function	line:6
+email	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  email: admin@snowbroker.com$/;"	function	line:7
+phone	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  phone: +1 111 222 3333$/;"	function	line:8
+brokerage	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  brokerage: snowbroker$/;"	function	line:9
+is_owner	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  is_owner: true$/;"	function	line:10
+snow_simple	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^snow_simple:$/;"	function	line:12
+first_name	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  first_name: Junior$/;"	function	line:13
+last_name	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  last_name: Juniorson$/;"	function	line:14
+email	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  email: junior@snowbroker.com$/;"	function	line:15
+phone	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  phone: +1 111 222 3333$/;"	function	line:16
+brokerage	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  brokerage: snowbroker$/;"	function	line:17
+is_owner	/Users/hornairs/Code/booker/test/fixtures/broker_users.yml	/^  is_owner: false$/;"	function	line:18
 Broker	/Users/hornairs/Code/booker/app/models/broker/user.rb	/^module Broker$/;"	module	line:1
 User	/Users/hornairs/Code/booker/app/models/broker/user.rb	/^  class User < ApplicationRecord$/;"	class	line:2	class:Broker
 name	/Users/hornairs/Code/booker/app/models/broker/user.rb	/^    def name$/;"	method	line:18	class:Broker.User
+Listing	/Users/hornairs/Code/booker/app/models/listing.rb	/^class Listing < ApplicationRecord$/;"	class	line:1
+Broker	/Users/hornairs/Code/booker/test/controllers/broker/brokerage_users_controller_test.rb	/^class Broker::UsersControllerTest < ActionDispatch::IntegrationTest$/;"	class	line:3
+ActiveSupport	/Users/hornairs/Code/booker/test/test_helper.rb	/^module ActiveSupport$/;"	module	line:5
+TestCase	/Users/hornairs/Code/booker/test/test_helper.rb	/^  class TestCase$/;"	class	line:6	class:ActiveSupport
+ActionController	/Users/hornairs/Code/booker/test/test_helper.rb	/^module ActionController$/;"	module	line:12
+TestCase	/Users/hornairs/Code/booker/test/test_helper.rb	/^  class TestCase$/;"	class	line:13	class:ActionController
+ActionDispatch	/Users/hornairs/Code/booker/test/test_helper.rb	/^module ActionDispatch$/;"	module	line:18
+IntegrationTest	/Users/hornairs/Code/booker/test/test_helper.rb	/^  class IntegrationTest$/;"	class	line:19	class:ActionDispatch
+one	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^one:$/;"	function	line:1
+title	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  title: MyString$/;"	function	line:2
+description	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  description: MyText$/;"	function	line:3
+brokerage	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  brokerage: snowbroker$/;"	function	line:4
+creator	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  creator: snow_admin$/;"	function	line:5
+image_url	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  image_url: MyString$/;"	function	line:6
+activated_at	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  activated_at: 2016-12-21 20:41:47$/;"	function	line:7
+two	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^two:$/;"	function	line:9
+title	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  title: MyString$/;"	function	line:10
+description	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  description: MyText$/;"	function	line:11
+brokerage	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  brokerage: snowbroker$/;"	function	line:12
+creator	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  creator: snow_admin$/;"	function	line:13
+image_url	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  image_url: MyString$/;"	function	line:14
+activated_at	/Users/hornairs/Code/booker/test/fixtures/listings.yml	/^  activated_at: 2016-12-21 20:41:47$/;"	function	line:15
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^module Broker$/;"	module	line:1
+UsersController	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  class UsersController < BrokerAreaController$/;"	class	line:2	class:Broker
+index	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def index$/;"	method	line:6	class:Broker.UsersController
+edit	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def edit$/;"	method	line:10	class:Broker.UsersController
+update	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def update$/;"	method	line:13	class:Broker.UsersController
+destroy	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def destroy$/;"	method	line:21	class:Broker.UsersController
+set_broker_user	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def set_broker_user$/;"	method	line:32	class:Broker.UsersController
+broker_user_params	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def broker_user_params$/;"	method	line:36	class:Broker.UsersController
+Broker	/Users/hornairs/Code/booker/test/controllers/broker/users_controller_test.rb	/^class Broker::UsersControllerTest < ActionDispatch::IntegrationTest$/;"	class	line:3
+BrokeragesControllerTest	/Users/hornairs/Code/booker/test/controllers/broker/brokerages_controller_test.rb	/^class BrokeragesControllerTest < ActionDispatch::IntegrationTest$/;"	class	line:3
+AdminUsers	/Users/hornairs/Code/booker/app/controllers/admin_users/sessions_controller.rb	/^module AdminUsers$/;"	module	line:1
+SessionsController	/Users/hornairs/Code/booker/app/controllers/admin_users/sessions_controller.rb	/^  class SessionsController < Devise::SessionsController$/;"	class	line:2	class:AdminUsers
+dev_auth	/Users/hornairs/Code/booker/app/controllers/admin_users/sessions_controller.rb	/^    def dev_auth$/;"	method	line:3	class:AdminUsers.SessionsController
 Broker	/Users/hornairs/Code/booker/app/controllers/broker/users/invitations_controller.rb	/^module Broker$/;"	module	line:1
 Users	/Users/hornairs/Code/booker/app/controllers/broker/users/invitations_controller.rb	/^  class Users::InvitationsController < Devise::InvitationsController$/;"	class	line:2	class:Broker
 update	/Users/hornairs/Code/booker/app/controllers/broker/users/invitations_controller.rb	/^    def update$/;"	method	line:8	class:Broker.Users
@@ -116,6 +163,4 @@ authenticate_inviter!	/Users/hornairs/Code/booker/app/controllers/broker/users/i
 after_invite_path_for	/Users/hornairs/Code/booker/app/controllers/broker/users/invitations_controller.rb	/^    def after_invite_path_for(_, _)$/;"	method	line:31	class:Broker.Users
 set_brokerage_context	/Users/hornairs/Code/booker/app/controllers/broker/users/invitations_controller.rb	/^    def set_brokerage_context$/;"	method	line:35	class:Broker.Users
 configure_permitted_parameters	/Users/hornairs/Code/booker/app/controllers/broker/users/invitations_controller.rb	/^    def configure_permitted_parameters$/;"	method	line:39	class:Broker.Users
-ApplicationController	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
-current_broker_user	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^  def current_broker_user$/;"	method	line:4	class:ApplicationController
-after_sign_in_path_for	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^  def after_sign_in_path_for(user)$/;"	method	line:12	class:ApplicationController
+InviteBrokerUserTest	/Users/hornairs/Code/booker/test/integration/invite_broker_user_test.rb	/^class InviteBrokerUserTest < ActionDispatch::IntegrationTest$/;"	class	line:3

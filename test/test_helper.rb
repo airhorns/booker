@@ -8,3 +8,15 @@ module ActiveSupport
     fixtures :all
   end
 end
+
+module ActionController
+  class TestCase
+    include Devise::Test::ControllerHelpers
+  end
+end
+
+module ActionDispatch
+  class IntegrationTest
+    include Devise::Test::IntegrationHelpers
+  end
+end

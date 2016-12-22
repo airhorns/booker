@@ -1,8 +1,8 @@
 module Broker
   class User < ApplicationRecord
     include DeviseInvitable::Inviter
-
     self.table_name = 'broker_users'
+
     devise :invitable, :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :timeoutable
     has_paper_trail
 

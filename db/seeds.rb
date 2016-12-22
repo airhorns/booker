@@ -1,7 +1,7 @@
-AdminUser.destroy_all
-Brokerage.destroy_all
-Broker::User.destroy_all
 Listing.destroy_all
+Broker::User.destroy_all
+Brokerage.destroy_all
+AdminUser.destroy_all
 
 AdminUser.new(email: 'admin@admin.com', password: 'admin1', password_confirmation: 'admin1').save!
 
