@@ -1,0 +1,42 @@
+<%= form_for(broker_user) do |f| %>
+  <% if broker_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(broker_user.errors.count, "error") %> prohibited this broker_user from being saved:</h2>
+
+      <ul>
+      <% broker_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :brokerage_id %>
+    <%= f.text_field :brokerage_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_owner %>
+    <%= f.check_box :is_owner %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,105 @@
+Brokerage	/Users/hornairs/Code/booker/app/controllers/broker_users/confirmations_controller.rb	/^class Brokerage::Users::ConfirmationsController < Devise::ConfirmationsController$/;"	class	line:1
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/users/confirmations_controller.rb	/^class Brokerage::Users::ConfirmationsController < Devise::ConfirmationsController$/;"	class	line:1
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/users/passwords_controller.rb	/^class Brokerage::Users::PasswordsController < Devise::PasswordsController$/;"	class	line:1
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/users/registrations_controller.rb	/^class Brokerage::Users::RegistrationsController < Devise::RegistrationsController$/;"	class	line:1
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/users/sessions_controller.rb	/^class Brokerage::Users::SessionsController < Devise::SessionsController$/;"	class	line:1
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/users/unlocks_controller.rb	/^class Brokerage::Users::UnlocksController < Devise::UnlocksController$/;"	class	line:1
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^module Brokerage$/;"	module	line:1
+ListingsController	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^  class ListingsController < ApplicationController$/;"	class	line:2	class:Brokerage
+index	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^    def index$/;"	method	line:6	class:Brokerage.ListingsController
+show	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^    def show$/;"	method	line:11	class:Brokerage.ListingsController
+new	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^    def new$/;"	method	line:15	class:Brokerage.ListingsController
+edit	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^    def edit$/;"	method	line:20	class:Brokerage.ListingsController
+create	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^    def create$/;"	method	line:24	class:Brokerage.ListingsController
+update	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^    def update$/;"	method	line:35	class:Brokerage.ListingsController
+destroy	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^    def destroy$/;"	method	line:44	class:Brokerage.ListingsController
+set_listing	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^      def set_listing$/;"	method	line:51	class:Brokerage.ListingsController
+listing_params	/Users/hornairs/Code/booker/app/controllers/brokerage/listings_controller.rb	/^      def listing_params$/;"	method	line:56	class:Brokerage.ListingsController
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/brokerages_controller.rb	/^module Brokerage$/;"	module	line:1
+BrokeragesController	/Users/hornairs/Code/booker/app/controllers/brokerage/brokerages_controller.rb	/^  class BrokeragesController < BrokerageAreaController$/;"	class	line:2	class:Brokerage
+show	/Users/hornairs/Code/booker/app/controllers/brokerage/brokerages_controller.rb	/^    def show$/;"	method	line:3	class:Brokerage.BrokeragesController
+Brokerage	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^module Brokerage$/;"	module	line:1
+UsersController	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  class UsersController < BrokerageAreaController$/;"	class	line:2	class:Brokerage
+index	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  def index$/;"	method	line:7	class:Brokerage.UsersController
+show	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  def show$/;"	method	line:12	class:Brokerage.UsersController
+new	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  def new$/;"	method	line:16	class:Brokerage.UsersController
+edit	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  def edit$/;"	method	line:21	class:Brokerage.UsersController
+create	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  def create$/;"	method	line:25	class:Brokerage.UsersController
+update	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  def update$/;"	method	line:36	class:Brokerage.UsersController
+destroy	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^  def destroy$/;"	method	line:45	class:Brokerage.UsersController
+set_broker_user	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^    def set_broker_user$/;"	method	line:52	class:Brokerage.UsersController
+broker_user_params	/Users/hornairs/Code/booker/app/controllers/brokerage/users_controller.rb	/^    def broker_user_params$/;"	method	line:57	class:Brokerage.UsersController
+Broker::Users	/Users/hornairs/Code/booker/app/controllers/broker_users/unlocks_controller.rb	/^class Broker::Users::UnlocksController < Devise::UnlocksController$/;"	class	line:1
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/users/confirmations_controller.rb	/^class Broker::Users::ConfirmationsController < Devise::ConfirmationsController$/;"	class	line:1
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/users/passwords_controller.rb	/^class Broker::Users::PasswordsController < Devise::PasswordsController$/;"	class	line:1
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/users/registrations_controller.rb	/^class Broker::Users::RegistrationsController < Devise::RegistrationsController$/;"	class	line:1
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/users/sessions_controller.rb	/^class Broker::Users::SessionsController < Devise::SessionsController$/;"	class	line:1
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/users/unlocks_controller.rb	/^class Broker::Users::UnlocksController < Devise::UnlocksController$/;"	class	line:1
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^module Broker$/;"	module	line:1
+ListingsController	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^  class ListingsController < BrokerAreaController$/;"	class	line:2	class:Broker
+index	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^    def index$/;"	method	line:6	class:Broker.ListingsController
+show	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^    def show$/;"	method	line:11	class:Broker.ListingsController
+new	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^    def new$/;"	method	line:15	class:Broker.ListingsController
+edit	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^    def edit$/;"	method	line:20	class:Broker.ListingsController
+create	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^    def create$/;"	method	line:24	class:Broker.ListingsController
+update	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^    def update$/;"	method	line:35	class:Broker.ListingsController
+destroy	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^    def destroy$/;"	method	line:44	class:Broker.ListingsController
+set_listing	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^      def set_listing$/;"	method	line:51	class:Broker.ListingsController
+listing_params	/Users/hornairs/Code/booker/app/controllers/broker/listings_controller.rb	/^      def listing_params$/;"	method	line:56	class:Broker.ListingsController
+Broker	/Users/hornairs/Code/booker/app/models/broker/broker_user.rb	/^module Broker$/;"	module	line:1
+User	/Users/hornairs/Code/booker/app/models/broker/broker_user.rb	/^  class User < ApplicationRecord$/;"	class	line:2	class:Broker
+Broker	/Users/hornairs/Code/booker/test/models/broker/broker_user_test.rb	/^module Broker$/;"	module	line:3
+UserTest	/Users/hornairs/Code/booker/test/models/broker/broker_user_test.rb	/^  class UserTest < ActiveSupport::TestCase$/;"	class	line:4	class:Broker
+CreateBrokerUsers	/Users/hornairs/Code/booker/db/migrate/20161221210612_create_broker_users.rb	/^class CreateBrokerUsers < ActiveRecord::Migration[5.0]$/;"	class	line:1
+change	/Users/hornairs/Code/booker/db/migrate/20161221210612_create_broker_users.rb	/^  def change$/;"	method	line:2	class:CreateBrokerUsers
+AddDeviseToBrokerUsers	/Users/hornairs/Code/booker/db/migrate/20161221211914_add_devise_to_broker_users.rb	/^class AddDeviseToBrokerUsers < ActiveRecord::Migration[5.0]$/;"	class	line:1
+up	/Users/hornairs/Code/booker/db/migrate/20161221211914_add_devise_to_broker_users.rb	/^  def self.up$/;"	singleton method	line:2	class:AddDeviseToBrokerUsers
+down	/Users/hornairs/Code/booker/db/migrate/20161221211914_add_devise_to_broker_users.rb	/^  def self.down$/;"	singleton method	line:44	class:AddDeviseToBrokerUsers
+CreateListings	/Users/hornairs/Code/booker/db/migrate/20161222014147_create_listings.rb	/^class CreateListings < ActiveRecord::Migration[5.0]$/;"	class	line:1
+change	/Users/hornairs/Code/booker/db/migrate/20161222014147_create_listings.rb	/^  def change$/;"	method	line:2	class:CreateListings
+AddDeviseToBrokerUsers	/Users/hornairs/Code/booker/db/migrate/20161221211914_add_devise_to_broker_users.rb	/^class AddDeviseToBrokerUsers < ActiveRecord::Migration[5.0]$/;"	class	line:1
+up	/Users/hornairs/Code/booker/db/migrate/20161221211914_add_devise_to_broker_users.rb	/^  def self.up$/;"	singleton method	line:2	class:AddDeviseToBrokerUsers
+down	/Users/hornairs/Code/booker/db/migrate/20161221211914_add_devise_to_broker_users.rb	/^  def self.down$/;"	singleton method	line:44	class:AddDeviseToBrokerUsers
+Broker	/Users/hornairs/Code/booker/app/helpers/broker/brokerages_helper.rb	/^module Broker$/;"	module	line:1
+BrokeragesHelper	/Users/hornairs/Code/booker/app/helpers/broker/brokerages_helper.rb	/^  module BrokeragesHelper$/;"	module	line:2	class:Broker
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^module Broker$/;"	module	line:1
+UsersController	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  class UsersController < BrokerAreaController$/;"	class	line:2	class:Broker
+index	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  def index$/;"	method	line:6	class:Broker.UsersController
+new	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  def new$/;"	method	line:10	class:Broker.UsersController
+edit	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  def edit$/;"	method	line:14	class:Broker.UsersController
+create	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  def create$/;"	method	line:17	class:Broker.UsersController
+update	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  def update$/;"	method	line:28	class:Broker.UsersController
+destroy	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^  def destroy$/;"	method	line:37	class:Broker.UsersController
+set_broker_user	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def set_broker_user$/;"	method	line:44	class:Broker.UsersController
+broker_user_params	/Users/hornairs/Code/booker/app/controllers/broker/users_controller.rb	/^    def broker_user_params$/;"	method	line:49	class:Broker.UsersController
+ApplicationHelper	/Users/hornairs/Code/booker/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	module	line:1
+tel_link	/Users/hornairs/Code/booker/app/helpers/application_helper.rb	/^  def tel_link(text)$/;"	method	line:2	class:ApplicationHelper
+Broker	/Users/hornairs/Code/booker/app/models/broker/user.rb	/^module Broker$/;"	module	line:1
+User	/Users/hornairs/Code/booker/app/models/broker/user.rb	/^  class User < ApplicationRecord$/;"	class	line:2	class:Broker
+name	/Users/hornairs/Code/booker/app/models/broker/user.rb	/^    def name$/;"	method	line:15	class:Broker.User
+Broker	/Users/hornairs/Code/booker/app/controllers/broker/brokerages_controller.rb	/^module Broker$/;"	module	line:1
+BrokeragesController	/Users/hornairs/Code/booker/app/controllers/broker/brokerages_controller.rb	/^  class BrokeragesController < BrokerAreaController$/;"	class	line:2	class:Broker
+show	/Users/hornairs/Code/booker/app/controllers/broker/brokerages_controller.rb	/^    def show$/;"	method	line:3	class:Broker.BrokeragesController
+BrokerAreaController	/Users/hornairs/Code/booker/app/controllers/broker_area_controller.rb	/^class BrokerAreaController < ApplicationController$/;"	class	line:1
+current_broker_user	/Users/hornairs/Code/booker/app/controllers/broker_area_controller.rb	/^  def current_broker_user$/;"	method	line:9	class:BrokerAreaController
+set_brokerage_context	/Users/hornairs/Code/booker/app/controllers/broker_area_controller.rb	/^  def set_brokerage_context$/;"	method	line:17	class:BrokerAreaController
+authenticate_broker_or_admin_user!	/Users/hornairs/Code/booker/app/controllers/broker_area_controller.rb	/^  def authenticate_broker_or_admin_user!$/;"	method	line:21	class:BrokerAreaController
+Broker	/Users/hornairs/Code/booker/app/helpers/broker/users_helper.rb	/^module Broker$/;"	module	line:1
+UsersHelper	/Users/hornairs/Code/booker/app/helpers/broker/users_helper.rb	/^  module UsersHelper$/;"	module	line:2	class:Broker
+permissions_text	/Users/hornairs/Code/booker/app/helpers/broker/users_helper.rb	/^    def permissions_text(user)$/;"	method	line:3	class:Broker.UsersHelper
+Brokerage	/Users/hornairs/Code/booker/app/models/brokerage.rb	/^class Brokerage < ApplicationRecord$/;"	class	line:1
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ * Any CSS and SCSS file within this directory, lib\/assets\/stylesheets, vendor\/assets\/stylesheets,$/;"	function	line:5
+html, body	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ html, body {$/;"	function	line:17
+.booker-avatar	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-avatar {$/;"	function	line:20
+.booker-layout .mdl-layout__header .mdl-layout__drawer-button	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-layout .mdl-layout__header .mdl-layout__drawer-button {$/;"	function	line:25
+.mdl-layout__drawer .avatar	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .mdl-layout__drawer .avatar {$/;"	function	line:28
+.booker-drawer	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-drawer {$/;"	function	line:31
+.booker-drawer .mdl-menu__container	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-drawer .mdl-menu__container {$/;"	function	line:35
+.booker-drawer .booker-navigation	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-drawer .booker-navigation {$/;"	function	line:38
+.booker-drawer .mdl-menu .mdl-menu__item	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-drawer .mdl-menu .mdl-menu__item {$/;"	function	line:42
+.booker-drawer-header	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-drawer-header {$/;"	function	line:50
+.booker-navigation	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-navigation {$/;"	function	line:65
+.booker-layout .booker-navigation .mdl-navigation__link	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-layout .booker-navigation .mdl-navigation__link {$/;"	function	line:70
+.booker-layout .booker-navigation .mdl-navigation__link:hover	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-layout .booker-navigation .mdl-navigation__link:hover {$/;"	function	line:83
+.booker-navigation .mdl-navigation__link .material-icons	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-navigation .mdl-navigation__link .material-icons {$/;"	function	line:87
+.booker-content	/Users/hornairs/Code/booker/app/assets/stylesheets/application.scss	/^ .booker-content {$/;"	function	line:93

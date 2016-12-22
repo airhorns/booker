@@ -18,7 +18,7 @@ RailsAdmin.config do |config|
     show_in_app
 
     # With an audit adapter, you can add:
-    PAPER_TRAILED = ['BrokerageUser']
+    PAPER_TRAILED = ['Broker::User']
     history_index { only PAPER_TRAILED }
     history_show { only PAPER_TRAILED }
   end

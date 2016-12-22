@@ -1,0 +1,25 @@
+<% content_for(:header_title) do %>
+Staff List
+<% end %>
+
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+  <ul class="mdl-list">
+    <% @broker_users.each do |user| %>
+    <li class="mdl-list__item mdl-list__item--two-line">
+      <span class="mdl-list__item-primary-content">
+        <%= gravatar_image_tag(user.email, alt: user.name, class: 'mdl-list__item-avatar') %>
+        <span><%= user.name %></span>
+        <span class="mdl-list__item-sub-title"><%= mail_to user.email %> / <%= tel_link user.phone %> / <%= permissions_text(user) %></span>
+      </span>
+      <span class="mdl-list__item-secondary-content">
+        <%= link_to 'Edit', edit_broker_user_path(user), class: 'mdl-list__item-secondary-action mdl-button mdl-js-button' %>
+        <%= link_to 'Remove', user, method: :delete, data: { confirm: 'Are you sure? This user will no longer be able to log in.' }, class: 'mdl-list__item-secondary-action  mdl-button mdl-js-button' %>
+      </span>
+    </li>
+    <% end %>
+  </ul>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+    <i class="material-icons">add</i>
+  </button>
+
+</div>

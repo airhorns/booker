@@ -22,6 +22,8 @@ gem 'letter_opener'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem 'paper_trail'
 
+gem 'gravatar_image_tag'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end

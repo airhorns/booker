@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @listing.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+
+<p>
+  <strong>Brokerage:</strong>
+  <%= @listing.brokerage %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @listing.creator_id %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @listing.image_url %>
+</p>
+
+<p>
+  <strong>Activated at:</strong>
+  <%= @listing.activated_at %>
+</p>
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

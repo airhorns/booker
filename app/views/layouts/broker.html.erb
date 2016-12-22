@@ -1,0 +1,66 @@
+<% content_for :mdl_stylesheet do %>
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css" />
+<% end %>
+
+<% if current_broker_user %>
+  <% content_for :header do %>
+  <div class="mdl-layout__header-row">
+    <span class="mdl-layout-title">
+      <%= @brokerage.name %>
+      <% if content_for(:header_title) %>
+      -
+      <%= yield(:header_title) %>
+      <% end %>
+    </span>
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+      <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+        <i class="material-icons">search</i>
+      </label>
+      <div class="mdl-textfield__expandable-holder">
+        <input class="mdl-textfield__input" type="text" id="search">
+        <label class="mdl-textfield__label" for="search">Enter your query...</label>
+      </div>
+    </div>
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="hdrbtn">
+      <li class="mdl-menu__item"><%= link_to "My Profile", edit_broker_user_path(current_broker_user) %></li>
+      <li class="mdl-menu__item"><%= link_to "Log Out", destroy_broker_user_session_path, method: :delete %></li>
+    </ul>
+  </div>
+  <% end %>
+  <% content_for :left_menu do %>
+  <div class="booker-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    <header class="booker-drawer-header">
+      <img src="https://getmdl.io/templates/dashboard/images/user.jpg" class="booker-avatar">
+      <div class="booker-avatar-dropdown">
+        <span>hello@example.com</span>
+      </div>
+    </header>
+    <nav class="booker-navigation mdl-navigation mdl-color--blue-grey-800">
+      <%= link_to brokerage_path, class: 'mdl-navigation__link' do %>
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home
+      <% end %>
+      <%= link_to brokerage_path, class: 'mdl-navigation__link' do %>
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">pin_drop</i>Listings
+      <% end %>
+      <%= link_to brokerage_path, class: 'mdl-navigation__link' do %>
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">vpn_key</i>Showings
+      <% end %>
+      <div class="mdl-layout-spacer"></div>
+      <%= link_to broker_users_path, class: 'mdl-navigation__link' do %>
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people_outline</i>Staff
+      <% end %>
+      <%= link_to brokerage_path, class: 'mdl-navigation__link' do %>
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>Settings
+      <% end %>
+      <%= link_to "#", class: 'mdl-navigation__link' do %>
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Help
+      <% end %>
+    </nav>
+  </div>
+  <% end %>
+<% end %>
+<%= render template: "layouts/application" %>
