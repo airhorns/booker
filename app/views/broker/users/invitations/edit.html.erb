@@ -1,0 +1,43 @@
+<div class="mdl-cell mdl-cell--4-col"></div>
+<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+  <div class="mdl-card__title mdl-card--expand">
+    <h2 class="mdl-card__title-text">Accept your invitation</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <p>You're almost ready to get started at <%= @brokerage.name %>, we just need some details from you before you get going.</p>
+    <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :put} do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :invitation_token %>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :password, class: 'mdl-textfield__label' %><br />
+        <%= f.password_field :password, autocomplete: "off", class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :password_confirmation, class: 'mdl-textfield__label' %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :first_name, class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :first_name, autocomplete: "off", class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :last_name, class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :last_name, autocomplete: "off", class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :phone, class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :phone, autocomplete: "off", class: 'mdl-textfield__input' %>
+      </div>
+
+      <div class="actions mdl-typography--display-3">
+        <%= f.submit "Create account", class: 'mdl-button mdl-js-button mdl-button--accent' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="mdl-cell mdl-cell--4-col"></div>

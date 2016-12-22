@@ -4,3 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+ApplicationController	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+current_broker_user	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^  def current_broker_user$/;"	method	line:4	class:ApplicationController
+after_sign_in_path_for	/Users/hornairs/Code/booker/app/controllers/application_controller.rb	/^  def after_sign_in_path_for(user)$/;"	method	line:12	class:ApplicationController

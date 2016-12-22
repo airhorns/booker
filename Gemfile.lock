@@ -64,6 +64,9 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise_invitable (1.7.0)
+      actionmailer (>= 4.0.0)
+      devise (>= 4.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
@@ -225,6 +228,7 @@ DEPENDENCIES
   byebug
   carrierwave (>= 1.0.0.rc, < 2.0)
   devise
+  devise_invitable
   gravatar_image_tag
   jquery-rails
   letter_opener

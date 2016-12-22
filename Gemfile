@@ -18,6 +18,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_admin'
 gem 'devise'
+gem 'devise_invitable'
+
 gem 'letter_opener'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem 'paper_trail'

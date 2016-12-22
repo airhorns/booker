@@ -3,13 +3,27 @@ Staff List
 <% end %>
 
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+  <%= link_to new_broker_user_invitation_path, class: "mdl-button mdl-js-button mdl-button--colored" do %>
+    <i class="material-icons">add</i>
+    Invite New Staff
+  <% end %>
   <ul class="mdl-list">
     <% @broker_users.each do |user| %>
     <li class="mdl-list__item mdl-list__item--two-line">
       <span class="mdl-list__item-primary-content">
         <%= gravatar_image_tag(user.email, alt: user.name, class: 'mdl-list__item-avatar') %>
+        <% if user.accepted_or_not_invited? %>
+          <span><%= user.name %></span>
+          <span class="mdl-list__item-sub-title"><%= mail_to user.email %> / <%= tel_link user.phone %> / <%= permissions_text(user) %></span>
+        <% else %>
         <span><%= user.name %></span>
-        <span class="mdl-list__item-sub-title"><%= mail_to user.email %> / <%= tel_link user.phone %> / <%= permissions_text(user) %></span>
+        <span class="mdl-list__item-sub-title">
+          <%= mail_to user.email %>
+          <% if user.invited_by %>
+            invited by <%= user.invited_by.name %>
+          <% end %>
+        </span>
+        <% end %>
       </span>
       <span class="mdl-list__item-secondary-content">
         <%= link_to 'Edit', edit_broker_user_path(user), class: 'mdl-list__item-secondary-action mdl-button mdl-js-button' %>
@@ -18,8 +32,4 @@ Staff List
     </li>
     <% end %>
   </ul>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-    <i class="material-icons">add</i>
-  </button>
-
 </div>
