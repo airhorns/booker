@@ -1,37 +1,26 @@
-<p id="notice"><%= notice %></p>
+<% content_for(:header_title) do %>
+Listings
+<% end %>
 
-<h1>Listings</h1>
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+  <%= link_to new_listing_path, class: "mdl-button mdl-js-button mdl-button--colored" do %>
+    <i class="material-icons">pin_drop</i>
+    Add new Listing
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Brokerage</th>
-      <th>Creator</th>
-      <th>Image url</th>
-      <th>Activated at</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <ul class="mdl-list">
     <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.title %></td>
-        <td><%= listing.description %></td>
-        <td><%= listing.brokerage %></td>
-        <td><%= listing.creator_id %></td>
-        <td><%= listing.image_url %></td>
-        <td><%= listing.activated_at %></td>
-        <td><%= link_to 'Show', listing %></td>
-        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <li class="mdl-list__item mdl-list__item--two-line">
+      <span class="mdl-list__item-primary-content">
+        <%= listing_image listing, class: 'mdl-list__item-avatar' %>
+        <span><%= listing.short_address %></span>
+        <span class="mdl-list__item-sub-title"><%= listing_active_string(listing) %> / 0 upcoming showings / <%= pluralize listing.clients.size, 'client' %> setup</span>
+      </span>
+      <span class="mdl-list__item-secondary-content">
+        <%= link_to 'Edit Details', edit_listing_path(listing), class: 'mdl-list__item-secondary-action mdl-button mdl-js-button' %>
+        <%= link_to 'Remove', listing, method: :delete, data: { confirm: 'Are you sure? No showings will be bookable for this listing any more.' }, class: 'mdl-list__item-secondary-action mdl-button mdl-js-button' %>
+      </span>
+    </li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Listing', new_listing_path %>
+  </ul>
+</div>

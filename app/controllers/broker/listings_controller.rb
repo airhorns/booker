@@ -1,60 +1,69 @@
 module Broker
   class ListingsController < BrokerAreaController
-    before_action :set_listing, only: [:show, :edit, :update, :destroy]
-
-    # GET /listings
     def index
-      @listings = Listing.all
+      @listings = Listing.includes(:clients).all
     end
 
-    # GET /listings/1
     def show
+      @listing = Listing.find(params[:id])
     end
 
-    # GET /listings/new
     def new
-      @listing = Listing.new
+      @listing = @brokerage.new_listing_in_jurisdiction
     end
 
-    # GET /listings/1/edit
     def edit
+      @listing = Listing.find(params[:id])
     end
 
-    # POST /listings
     def create
-      @listing = Listing.new(listing_params)
+      @listing = @service.create(listing_params)
 
-      if @listing.save
+      if @listing.persisted?
         redirect_to @listing, notice: 'Listing was successfully created.'
       else
         render :new
       end
     end
 
-    # PATCH/PUT /listings/1
     def update
-      if @listing.update(listing_params)
+      @listing = Listing.find(params[:id])
+      if @service.update(@listing, listing_params)
         redirect_to @listing, notice: 'Listing was successfully updated.'
       else
         render :edit
       end
     end
 
-    # DELETE /listings/1
     def destroy
-      @listing.destroy
+      Listing.find(params[:id]).destroy
       redirect_to listings_url, notice: 'Listing was successfully destroyed.'
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_listing
-        @listing = Listing.find(params[:id])
-      end
 
-      # Only allow a trusted parameter "white list" through.
-      def listing_params
-        params.require(:listing).permit(:title, :description, :brokerage_id, :creator_id_id, :image_url, :activated_at)
-      end
+    def service
+      @service ||= ListingService.new(@brokerage, current_broker_user)
+    end
+
+    # Only allow a trusted parameter "white list" through.
+    def listing_params
+      params.require(:listing).permit(
+        :title,
+        :description,
+        :image_url,
+        :activated_at,
+        :street_1,
+        :street_2,
+        :postal_code,
+        :client_managed,
+        client: [
+          :first_name,
+          :last_name,
+          :email,
+          :telephone
+        ]
+      )
+    end
   end
 end

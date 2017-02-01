@@ -11,37 +11,102 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.label :title, class: 'mdl-textfield__label' %><br />
+      <%= f.text_field :title, autofocus: true, class: 'mdl-textfield__input', required: true %>
+    </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
+    <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.label :description, class: 'mdl-textfield__label' %><br />
+      <%= f.text_area :description, class: 'mdl-textfield__input', rows: 3 %>
+    </div>
 
-  <div class="field">
-    <%= f.label :brokerage_id %>
-    <%= f.text_field :brokerage_id %>
-  </div>
+    <h4 class="mdl-cell mdl-cell--12-col form-heading">Listing Address</h4>
 
-  <div class="field">
-    <%= f.label :creator_id_id %>
-    <%= f.text_field :creator_id_id %>
-  </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :street_1, 'Street line 1', class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :street_1, class: 'mdl-textfield__input', required: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-  </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :street_2, 'Street line 2', class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :street_2, class: 'mdl-textfield__input' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :activated_at %>
-    <%= f.datetime_select :activated_at %>
-  </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :postal_code, class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :postal_code, class: 'mdl-textfield__input', required: true %>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="mdl-cell mdl-cell--6-col">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :city, class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :city, class: 'mdl-textfield__input', disabled: true, required: true %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :country, class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :country, class: 'mdl-textfield__input', disabled: true, required: true %>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :region, class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :region, class: 'mdl-textfield__input', disabled: true, required: true %>
+      </div>
+    </div>
+
+    <h4 class="mdl-cell mdl-cell--12-col form-heading">Management</h4>
+
+    <div class="mdl-cell mdl-cell--12-col">
+      <p>Is this listing going to be managed by the client/occupant, or the brokerage?</p>
+      <label class="mdl-radio mdl-js-radio" for="client_managed">
+        <input class="mdl-radio__button" id="client_managed" name="listing[client_managed]" type="radio" value="1" checked>
+        <span class="mdl-radio__label">Client or occupant managed</span>
+      </label>
+      <br/>
+      <label class="mdl-radio mdl-js-radio" for="brokerage_managed">
+        <input class="mdl-radio__button" id="brokerage_managed" name="listing[client_managed]" type="radio" value="0">
+        <span class="mdl-radio__label">Brokerage managed</span>
+      </label>
+    </div>
+    <%= f.fields_for listing.clients.first_or_initialize do |f| %>
+    <div class="mdl-cell mdl-cell--6-col client-details-form">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :first_name, 'Client first name', class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :first_name, class: 'mdl-textfield__input', required: true %>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :last_name, 'Client last name', class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :last_name, class: 'mdl-textfield__input', required: true %>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col client-details-form">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :telephone, 'Client telephone', class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :telephone, class: 'mdl-textfield__input' %>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :email, 'Client email', class: 'mdl-textfield__label' %><br />
+        <%= f.text_field :email, class: 'mdl-textfield__input', required: true %>
+      </div>
+    </div>
+    <% end %>
+
+    <h4 class="mdl-cell mdl-cell--12-col form-heading">Publishing</h4>
+
+    <div class="mdl-cell mdl-cell--12-col">
+      <p>Check this box if you would like the listing to be bookable as soon as it is created for anyone with the link.</p>
+      <div class="mdl-checkbox mdl-js-checkbox">
+        <%= f.check_box :activate_now, class: 'mdl-checkbox__input' %>
+        <%= f.label :activate_now, class: 'mdl-checkbox__label' %>
+      </div>
+    </div>
+
+    <div class="actions mdl-typography--display-3">
+      <%= f.submit class: 'mdl-button mdl-js-button mdl-button--accent' %>
+    </div>
   </div>
 <% end %>

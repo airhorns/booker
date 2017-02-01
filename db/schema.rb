@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222031548) do
+ActiveRecord::Schema.define(version: 20161222194146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,19 +78,78 @@ ActiveRecord::Schema.define(version: 20161222031548) do
   create_table "brokerages", force: :cascade do |t|
     t.string   "name"
     t.string   "logo_url"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.string   "street_1"
+    t.string   "street_2"
+    t.string   "city"
+    t.string   "region"
+    t.string   "country"
+    t.string   "postal_code"
+    t.string   "valid_listing_cities",    default: [],              array: true
+    t.string   "valid_listing_regions",   default: [],              array: true
+    t.string   "valid_listing_countries", default: [],              array: true
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string   "first_name",                          null: false
+    t.string   "last_name",                           null: false
+    t.string   "telephone"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.string   "invitation_token"
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer  "invitation_limit"
+    t.string   "invited_by_type"
+    t.integer  "invited_by_id"
+    t.integer  "invitations_count",      default: 0
+    t.index ["email"], name: "index_clients_on_email", unique: true, using: :btree
+    t.index ["invitation_token"], name: "index_clients_on_invitation_token", unique: true, using: :btree
+    t.index ["invitations_count"], name: "index_clients_on_invitations_count", using: :btree
+    t.index ["invited_by_id"], name: "index_clients_on_invited_by_id", using: :btree
+    t.index ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "listing_managers", force: :cascade do |t|
+    t.integer  "client_id",  null: false
+    t.integer  "listing_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_listing_managers_on_client_id", using: :btree
+    t.index ["listing_id"], name: "index_listing_managers_on_listing_id", using: :btree
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",                         null: false
     t.text     "description"
+    t.boolean  "client_managed", default: true, null: false
     t.integer  "brokerage_id"
     t.integer  "creator_id"
     t.string   "image_url"
     t.datetime "activated_at"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "street_1",                      null: false
+    t.string   "street_2"
+    t.string   "city",                          null: false
+    t.string   "country",                       null: false
+    t.string   "region"
+    t.string   "postal_code"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "mls_number"
     t.index ["brokerage_id"], name: "index_listings_on_brokerage_id", using: :btree
     t.index ["creator_id"], name: "index_listings_on_creator_id", using: :btree
   end
@@ -116,6 +175,8 @@ ActiveRecord::Schema.define(version: 20161222031548) do
     t.index ["transaction_id"], name: "index_versions_on_transaction_id", using: :btree
   end
 
+  add_foreign_key "listing_managers", "clients"
+  add_foreign_key "listing_managers", "listings"
   add_foreign_key "listings", "broker_users", column: "creator_id"
   add_foreign_key "listings", "brokerages"
 end

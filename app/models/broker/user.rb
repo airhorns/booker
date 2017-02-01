@@ -3,7 +3,7 @@ module Broker
     include DeviseInvitable::Inviter
     self.table_name = 'broker_users'
 
-    devise :invitable, :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :timeoutable
+    devise :invitable, :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :timeoutable
     has_paper_trail
 
     validates :first_name, presence: true

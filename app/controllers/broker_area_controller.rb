@@ -7,7 +7,11 @@ class BrokerAreaController < ApplicationController
   private
 
   def authenticate_broker_or_admin_user!
-    admin_user_signed_in? || authenticate_broker_user!
+    if !broker_user_signed_in? && admin_user_signed_in?
+      redirect_to broker_admin_masquerade_path
+    else
+      authenticate_broker_user!
+    end
   end
 
   def set_brokerage_context

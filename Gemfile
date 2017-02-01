@@ -26,6 +26,11 @@ gem 'paper_trail'
 
 gem 'gravatar_image_tag'
 
+gem 'rets'
+gem 'geocoder'
+gem 'ice_cube'
+gem 'schedulable'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end

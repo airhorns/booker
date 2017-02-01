@@ -1,0 +1,22 @@
+<% content_for(:header_title) do %>
+Log in As
+<% end %>
+
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+  <ul class="mdl-list">
+    <% @broker_users.each do |user| %>
+    <li class="mdl-list__item mdl-list__item--two-line">
+      <span class="mdl-list__item-primary-content">
+        <%= gravatar_image_tag(user.email, alt: user.name, class: 'mdl-list__item-avatar') %>
+        <% if user.accepted_or_not_invited? %>
+          <span><%= user.name %></span>
+          <span class="mdl-list__item-sub-title"><%= mail_to user.email %> / <%= tel_link user.phone %> / <%= permissions_text(user) %></span>
+        <% end %>
+      </span>
+      <span class="mdl-list__item-secondary-content">
+        <%= link_to "Login As #{user.name}", admin_masquerades_path(broker_user_id: user.id), class: 'mdl-list__item-secondary-action mdl-button mdl-js-button', method: :post %>
+      </span>
+    </li>
+    <% end %>
+  </ul>
+</div>

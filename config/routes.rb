@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :clients
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   devise_for :admin_users, controllers: {
@@ -7,8 +8,8 @@ Rails.application.routes.draw do
     confirmations: 'admin_users/confirmations',
     unlocks: 'admin_users/unlocks'
   }
-  scope :broker do
-    root to: 'broker/brokerages#show', as: 'brokerage'
+  scope :broker, module: 'broker' do
+    root to: 'brokerages#show', as: 'brokerage'
 
     devise_for :'broker/users', path: 'auth', controllers: {
       sessions: 'broker/users/sessions',
@@ -18,8 +19,9 @@ Rails.application.routes.draw do
       invitations: 'broker/users/invitations'
     }
 
-    resources :users, controller: 'broker/users', as: 'broker_users', only: %i(index edit update destroy)
+    resources :users, as: 'broker_users', only: %i(index edit update destroy)
     resources :listings
+    resources :admin_masquerades, only: %i(index create)
   end
 
   if Rails.env.development?
