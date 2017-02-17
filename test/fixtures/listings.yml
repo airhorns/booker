@@ -5,6 +5,9 @@ one:
   creator: snow_admin
   image_url: MyString
   activated_at: 2016-12-21 20:41:47
+  street_1: MyStreet
+  city: MyCity
+  country: MyCountry
 
 two:
   title: MyString
@@ -13,3 +16,6 @@ two:
   creator: snow_admin
   image_url: MyString
   activated_at: 2016-12-21 20:41:47
+  street_1: MyStreet
+  city: MyCity
+  country: MyCountry
